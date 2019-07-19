@@ -15,6 +15,7 @@ if you need to ask questions. just text the group chat.
 
 Alex's notes:
 
+python api tutoral: https://codeburst.io/this-is-how-easy-it-is-to-create-a-rest-api-8a25122ab1f3
 
 
 Gary's notes:
