@@ -19,7 +19,7 @@ python api tutoral: https://codeburst.io/this-is-how-easy-it-is-to-create-a-rest
 
 
 Gary's notes:
-
+test
 
 
 Rhett's notes:
