@@ -6,10 +6,10 @@ import {
 } from 'react-router-dom';
 import NavigationContainer from './navigation/navigation-container';
 import Home from './pages/home';
-import About from './pages/about';
-import Contact from './pages/contact';
-import Blog from './pages/blog';
-import Auth from './pages/auth';
+import Store from './pages/store';
+import Room from './pages/room';
+import SignUp from './pages/sign-up';
+import Login from './pages/login';
 
 export default class App extends Component {
   render() {
@@ -20,10 +20,10 @@ export default class App extends Component {
           <div>
             <Switch>
               <Route exact path = "/" Component = {Home} />
-              <Route path = "/about-me" Component = {About} />
-              <Route path = "/contact" Component = {Contact} />
-              <Route path = "/blog" Component = {Blog}/>
-              <Route path = "/auth" Component = {Auth}/>
+              <Route path = "/store" Component = {Store} />
+              <Route path = "/room" Component = {Room} />
+              <Route path = "/sign-up" Component = {SignUp}/>
+              <Route path = "/login" Component = {Login}/>
             </Switch>
           </div>
         </Router>
