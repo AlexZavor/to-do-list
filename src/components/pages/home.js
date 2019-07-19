@@ -1,17 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 
 import ListComponent from "../list/list-component"
 
-export default class Home extends Component {
-  constructor() {
-    super();
-  }
-
-  render() {
-      return(
+export default function(){
+    return(
         <div>
             <ListComponent />
         </div>
-      )
-  }
+    )
 }
