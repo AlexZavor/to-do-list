@@ -19,11 +19,11 @@ export default class App extends Component {
           <div>
             <NavigationContainer />
             <Switch>
-              <Route exact path = "/" Component = {Home} />
-              <Route path = "/store" Component = {Store} />
-              <Route path = "/room" Component = {Room} />
-              <Route path = "/sign-up" Component = {SignUp}/>
-              <Route path = "/login" Component = {Login}/>
+              <Route exact path = "/" component = {Home} />
+              <Route path = "/store" component = {Store} />
+              <Route path = "/room" component = {Room} />
+              <Route path = "/sign-up" component = {SignUp}/>
+              <Route path = "/login" component = {Login}/>
             </Switch>
           </div>
         </Router>
