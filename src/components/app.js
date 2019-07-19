@@ -15,9 +15,9 @@ export default class App extends Component {
   render() {
     return (
       <div className='app'>
-        <NavigationContainer />
         <Router>
           <div>
+            <NavigationContainer />
             <Switch>
               <Route exact path = "/" Component = {Home} />
               <Route path = "/store" Component = {Store} />
