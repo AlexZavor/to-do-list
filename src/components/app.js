@@ -16,19 +16,20 @@ export default class App extends Component {
     return (
       <div className='app'>
         <NavigationContainer />
-          <Router>
-            <div>
-              <Switch>
-                <Route exact path = "/" component = {Home} />
-                <Route path = "/about-me" component = {About} />
-                <Route path = "/contact" component = {Contact} />
-                <Route path = "/auth" component = {Auth} />
-                <Route path = "/blog" component = {Blog}/>
+        <Router>
+          <div>
+            <Switch>
+              <Route exact path = "/" component = {Home} />
+              <Route path = "/about-me" component = {About} />
+              <Route path = "/contact" component = {Contact} />
+              <Route path = "/auth" component = {Auth} />
+              <Route path = "/blog" component = {Blog}/>
 
-                <Route component = {NoMatch} />
-              </Switch>
-            </div>
-          </Router>
+              <Route component = {NoMatch} />
+            </Switch>
+          </div>
+        </Router>
+      </div>
     );
   }
 }
