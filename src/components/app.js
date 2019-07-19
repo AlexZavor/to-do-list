@@ -5,11 +5,11 @@ import {
   Route
 } from 'react-router-dom';
 import NavigationContainer from './navigation/navigation-container';
-import Home from './pages/home';
-import Store from './pages/store';
-import Room from './pages/room';
-import SignUp from './pages/sign-up';
-import Login from './pages/login';
+import home from './pages/home';
+import store from './pages/store';
+import room from './pages/room';
+import signUp from './pages/sign-up';
+import login from './pages/login';
 
 export default class App extends Component {
   render() {
@@ -19,11 +19,11 @@ export default class App extends Component {
           <div>
             <NavigationContainer />
             <Switch>
-              <Route exact path = "/" component = {Home} />
-              <Route path = "/store" component = {Store} />
-              <Route path = "/room" component = {Room} />
-              <Route path = "/sign-up" component = {SignUp}/>
-              <Route path = "/login" component = {Login}/>
+              <Route exact path = "/" component = {home} />
+              <Route path = "/store" component = {store} />
+              <Route path = "/room" component = {room} />
+              <Route path = "/sign-up" component = {signUp}/>
+              <Route path = "/login" component = {login}/>
             </Switch>
           </div>
         </Router>
