@@ -19,13 +19,11 @@ export default class App extends Component {
         <Router>
           <div>
             <Switch>
-              <Route exact path = "/" component = {Home} />
-              <Route path = "/about-me" component = {About} />
-              <Route path = "/contact" component = {Contact} />
-              <Route path = "/auth" component = {Auth} />
-              <Route path = "/blog" component = {Blog}/>
-
-              <Route component = {NoMatch} />
+              <Route exact path = "/" Component = {Home} />
+              <Route path = "/about-me" Component = {About} />
+              <Route path = "/contact" Component = {Contact} />
+              <Route path = "/blog" Component = {Blog}/>
+              <Route path = "/auth" Component = {Auth}/>
             </Switch>
           </div>
         </Router>
