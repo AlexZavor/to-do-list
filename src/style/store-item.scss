@@ -21,6 +21,16 @@
         text-align: center;
         position: relative;
         box-shadow: 7px 7px 10px 0px rgba(0,0,0,0.5);
+        transition: .5s ease-in-out;
+
+        cursor: pointer;
+
+        &:focus-within{
+            box-shadow: inset 7px 7px 10px 0px rgba(0,0,0,0.5);
+        }
+        &:hover{
+            box-shadow: 7px 7px 15px 0px rgba(0,0,0,0.7)
+        }
 
         .store-item-title-wrapper{
             h3{
