@@ -2,6 +2,13 @@ import React, {Component} from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class StoreItems extends Component {
+    //TODO - 
+    // get click handler to work
+    // get focus click styles to work
+    // place cart in correct position
+    // export gold prop to shop
+    // add pictures
+
     constructor(){
         super();
 
