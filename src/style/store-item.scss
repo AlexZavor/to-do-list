@@ -1,0 +1,35 @@
+
+.store-items-wrapper{
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+
+    .store-item-wrapper{
+        border: solid 2px $blue;
+        border-radius: 4px;
+        color: $blue;
+        background-color: $light-blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        margin: 0px;
+        text-align: center;
+
+        .store-item-title-wrapper{
+            h3{
+                margin: 0px;
+            }
+        }
+        h5{
+            margin: 0px;
+        }
+        h6{
+            margin: 0px;
+            color: $warning;
+        }
+    }
+}

@@ -8,13 +8,13 @@ export default class StoreItems extends Component{
             storeItems: [
                 {name: 'plant',
                 price: 200,
-                descripton: 'a simple plant for your room',
+                description: 'a simple plant for your room',
                 icon_url: null,
                 key: '1'},
                 
                 {name: 'sword',
                 price: 150,
-                descripton: 'a strong sword to weild',
+                description: 'a strong sword to weild',
                 icon_url: null,
                 key: '2'}
             ]
@@ -27,11 +27,11 @@ export default class StoreItems extends Component{
         return(
             this.state.storeItems.map(item =>{
                 return(
-                    <div>
+                    <div className="store-item-wrapper" key={item.key}>
                         <div className="store-item-title-wrapper">
                             <h3>{item.name}</h3>
                         </div>
-                        <h5>{item.descripton}</h5>
+                        <h5>{item.description}</h5>
                         <h6>{item.price}</h6>
                     </div>
                 );
@@ -41,7 +41,7 @@ export default class StoreItems extends Component{
 
     render(){
         return(
-            <div>
+            <div className="store-items-wrapper">
                 {this.mapStoreItems()}
             </div>
         );

@@ -1,4 +1,9 @@
 @import 'variables.scss';
 @import 'base.scss';
+
 @import 'navbar.scss';
 @import 'list-component.scss';
+
+// store component styles
+@import 'store.scss';
+@import 'store-item.scss';
