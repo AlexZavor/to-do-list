@@ -17,7 +17,9 @@
         justify-content: center;
         height: 100px;
         margin: 0px;
+        padding: 5px;
         text-align: center;
+        position: relative;
 
         .store-item-title-wrapper{
             h3{
@@ -28,8 +30,11 @@
             margin: 0px;
         }
         h6{
-            margin: 0px;
+            margin: 3px;
             color: $warning;
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
     }
 }
