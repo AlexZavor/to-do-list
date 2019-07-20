@@ -5,7 +5,7 @@ export default class Store extends Component {
     render() {
         return (
             <div className="store-wrapper">
-                <h1>Store Component</h1>
+                <h1>Welcome to the store!</h1>
 
                 <StoreItems />
             </div>

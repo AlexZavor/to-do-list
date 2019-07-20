@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default class StoreItems extends Component{
+export default class StoreItems extends Component {
     constructor(){
         super();
 
@@ -47,13 +48,16 @@ export default class StoreItems extends Component{
                     <div 
                     className="store-item-wrapper" 
                     key={item.key}
-                    onClick={this.handlePurchase}
                     >
 
                         <div className="store-item-title-wrapper">
                             <h3>{item.name}</h3>
                         </div>
                         <h5>{item.description}</h5>
+                        <FontAwesomeIcon
+                            icon="shopping-cart"
+                            onClick={this.handlePurchase} 
+                        />
                         <h5 className="alert">{this.state.purchaseAlert}</h5>
                         <h6>{item.price}</h6>
                     </div>

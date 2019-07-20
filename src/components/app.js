@@ -11,7 +11,20 @@ import room from './pages/room';
 import signUp from './pages/sign-up';
 import login from './pages/login';
 
+
+import Icons from '../helpers/icons';
+
 export default class App extends Component {
+  constructor(props){
+    super(props);
+
+    Icons();
+
+    this.state = {
+      loggedInStatus: '',
+      gold: ''
+    }
+  }
   render() {
     return (
       <div className='app'>
