@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StoreItem from '../store/store-item'
+import StoreItems from '../store/store-items'
 
 export default class Store extends Component {
     render() {
@@ -7,7 +7,7 @@ export default class Store extends Component {
             <div>
                 <h1>Store Component</h1>
 
-                <StoreItem />
+                <StoreItems />
             </div>
         );
     }
