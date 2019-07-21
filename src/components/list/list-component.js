@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class ListComponent extends Component {
   constructor() {
@@ -32,14 +33,29 @@ export default class ListComponent extends Component {
     this.newElement=this.newElement.bind(this);
     this.handleChange=this.handleChange.bind(this);
     this.mapItems=this.mapItems.bind(this);
+    this.crossOut = this.crossOut.bind(this);
 
+  }
+
+
+//   HELP
+  crossOut(listItems) {
+    console.log("done")
+    this.setState({
+        //   ...this.state.listItems, status: "complete"
+
+        // listItems: update(this.state.listItems, {1: {status: {$set: "complete"}}})
+
+        [listItems.status]: "complete"
+        
+    })
   }
 
   mapItems() {
     return (
       this.state.listItems.map(item => {
           return(
-              <li key={item.key}>{item.name}</li>
+              <li key={item.key} onClick={this.crossOut}>{item.name}</li>
           );
       })
     );
@@ -95,6 +111,7 @@ newElement() {
             </div>
 
                 <ul id="myUL">
+                    
                     {this.mapItems()}
                 </ul>
         </div>
