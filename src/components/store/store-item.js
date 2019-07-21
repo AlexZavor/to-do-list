@@ -6,8 +6,8 @@ export default class StoreItem extends Component {
         super(props);
 
         this.state={
-            clicked: '',
-            purchaseAlert: ''
+            purchaseAlert: '',
+            gold: 100
         }
 
         this.handlePurchase = this.handlePurchase.bind(this);
@@ -15,19 +15,16 @@ export default class StoreItem extends Component {
 
     handlePurchase(event){
         console.log('puchaseing', this.props.item);
-        this.setState({
-            clicked: 'clicked'
-        })
         
-        // if (item.price <= this.props.gold){
-        //     this.setState({
-        //         [item.owned]: true
-        //     })
-        // }else{
-        //     this.setState({
-        //         purchaseAlert: 'insufficent funds'
-        //     })
-        // }
+        if (this.props.item.price <= this.state.gold){
+            this.setState({
+                [item.owned]: true
+            })
+        }else{
+            this.setState({
+                purchaseAlert: 'insufficent funds'
+            })
+        }
     }
 
     render(){
@@ -40,10 +37,9 @@ export default class StoreItem extends Component {
         } = this.props.item
         return(
             <div 
-                className={"store-item-wrapper" + this.state.clicked}
+                className="store-item-wrapper"
                 key={key}
             >
-
                 <div className="store-item-title-wrapper">
                     <h3>{name}</h3>
                 </div>

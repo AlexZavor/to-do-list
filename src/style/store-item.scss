@@ -49,9 +49,13 @@
             left: 0;
             margin: 5px;
         }
-    }
-    .clicked{
-        transition: .5s;
-        box-shadow: inset 7px 7px 10px 0px rgba(0,0,0,0.5);
+        .alert{
+            position: absolute;
+            bottom: 0;
+            font-size: .6em;
+            color: $error;
+            margin: 3px;
+            transition: .2s ease-in-out;
+        }
     }
 }
