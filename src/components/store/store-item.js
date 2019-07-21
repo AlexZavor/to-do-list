@@ -32,10 +32,14 @@ export default class StoreItem extends Component {
             description,
             icon_url,
             key,
+            owned
         } = this.props.item
         return(
             <div 
-                className="store-item-wrapper"
+                className={owned === false ? (
+                    'store-item-wrapper' 
+                    ):(
+                    'owned-store-item-wrapper')}
                 key={key}
             >
                 <div className="store-item-title-wrapper">

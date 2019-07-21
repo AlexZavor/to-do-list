@@ -3,8 +3,6 @@ import StoreItem from './store-item';
 
 export default class StoreItems extends Component {
     //TODO - 
-    // get focus click styles to work
-    // place cart in correct position
     // export gold prop to shop
     // add pictures
 

@@ -60,4 +60,59 @@
             margin-left: 35px;
         }
     }
+    .owned-store-item-wrapper{
+        border: solid 2px $blue;
+        border-radius: 4px;
+        color: $blue;
+        background-color: $light-blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        margin: 0px;
+        padding: 5px;
+        text-align: center;
+        position: relative;
+        box-shadow: 7px 7px 10px 0px rgba(0,0,0,0.5);
+        transition: .5s ease-in-out;
+        filter: blur(1px) brightness(40%);
+
+        &:hover{
+            box-shadow: 7px 7px 15px 0px rgba(0,0,0,0.7)
+        }
+
+        .store-item-title-wrapper{
+            h3{
+                margin: 0px;
+            }
+        }
+        h5{
+            margin: 0px;
+        }
+        h6{
+            margin: 3px;
+            color: $warning;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        svg{
+            cursor: pointer;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 5px;
+        }
+        .alert{
+            position: absolute;
+            bottom: 0;
+            font-size: .6em;
+            color: $error;
+            margin: 3px;
+            transition: .2s ease-in-out;
+            left: 0;
+            margin-left: 35px;
+        }
+    }
 }
