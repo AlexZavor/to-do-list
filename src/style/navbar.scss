@@ -16,19 +16,19 @@
         font-size: 0.9rem;
 
         a {
-            color: gray;
+            color: $light-blue;
             text-decoration: none;
             &:hover{
-                color: black;
+                color: $blue;
             }
         }
         &:hover{
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid $blue;
         }
 
         .nav-link-active{
-            border-bottom: 1px solid black;
-            color: black;
+            border-bottom: 1px solid $blue;
+            color: $blue;
         }
     }
 

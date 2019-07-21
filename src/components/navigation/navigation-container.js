@@ -3,15 +3,6 @@ import {withRouter} from 'react-router';
 import {NavLink} from 'react-router-dom';
 
 const NavigationComponent = props => {
-    const dynamicLink = (route, linkText) =>{
-        return(
-            <div className="nav-link-wrapper">
-                <NavLink to={route} activeClassName="nav-link-active">
-                    {linkText}
-                </NavLink>
-            </div>
-        );
-    };
 
     return(
         <div className="nav-wrapper">
@@ -22,23 +13,25 @@ const NavigationComponent = props => {
                 </div>
 
                 <div className="nav-link-wrapper">
-                    <NavLink to="/about-me" activeClassName="nav-link-active">
-                        About</NavLink>
+                    <NavLink to="/store" activeClassName="nav-link-active">
+                        Store</NavLink>
                 </div>
 
                 <div className="nav-link-wrapper">
-                    <NavLink to="/contact" activeClassName="nav-link-active">
-                        Contact</NavLink>
-                </div>
-
-                <div className="nav-link-wrapper">
-                    <NavLink to="/blog" activeClassName="nav-link-active">
-                        Blog</NavLink>
+                    <NavLink to="/room" activeClassName="nav-link-active">
+                        Your room</NavLink>
                 </div>
 
             </div>
             <div className="right-side">
-                Alex, Rhett, and Gary
+                <div className="nav-link-wrapper">
+                    <NavLink to="/sign-up" activeClassName="nav-link-active">
+                        Sign Up</NavLink>
+                </div>
+                <div className="nav-link-wrapper">
+                    <NavLink to="/login" activeClassName="nav-link-active">
+                        Log In</NavLink>
+                </div>
             </div>
         </div>
     );

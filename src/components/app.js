@@ -5,28 +5,41 @@ import {
   Route
 } from 'react-router-dom';
 import NavigationContainer from './navigation/navigation-container';
+import home from './pages/home';
+import store from './pages/store';
+import room from './pages/room';
+import signUp from './pages/sign-up';
+import login from './pages/login';
+
+
+import Icons from '../helpers/icons';
 
 export default class App extends Component {
+  constructor(props){
+    super(props);
+
+    Icons();
+
+    this.state = {
+      loggedInStatus: '',
+      gold: ''
+    }
+  }
   render() {
     return (
       <div className='app'>
-        <NavigationContainer />
-          <Router>
-            <div>
-              <Switch>
-                <Route exact path = "/" component = {Home} />
-                <Route path = "/about-me" component = {About} />
-                <Route path = "/contact" component = {Contact} />
-                <Route path = "/auth" component = {Auth} />
-                <Route path = "/blog" component = {Blog}/>
-
-                <Route component = {NoMatch} />
-              </Switch>
-            </div>
-          </Router>  
-        <h1>Website startup</h1>
-        <h2>The very beggining of something new.</h2>
-        <p>Ill come back to this as soon as I can, weeeeeeee</p>
+        <Router>
+          <div>
+            <NavigationContainer />
+            <Switch>
+              <Route exact path = "/" component = {home} />
+              <Route path = "/store" component = {store} />
+              <Route path = "/room" component = {room} />
+              <Route path = "/sign-up" component = {signUp} />
+              <Route path = "/login" component = {login} />
+            </Switch>
+          </div>
+        </Router>
       </div>
     );
   }
