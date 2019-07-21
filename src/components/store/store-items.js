@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import StoreItem from './store-item';
 
 export default class StoreItems extends Component {
     //TODO - 
-    // get click handler to work
     // get focus click styles to work
     // place cart in correct position
     // export gold prop to shop
@@ -13,7 +12,6 @@ export default class StoreItems extends Component {
         super();
 
         this.state = {
-            purchaseAlert: '',
             storeItems: [
                 {name: 'plant',
                 price: 200,
@@ -32,43 +30,17 @@ export default class StoreItems extends Component {
         }
 
         this.mapStoreItems = this.mapStoreItems.bind(this);
-        this.handlePurchase = this.handlePurchase.bind(this);
-    }
-
-    handlePurchase(event){
-        console.log('puchaceing', event.target);
-        // if (item.price <= this.props.gold){
-        //     this.setState({
-        //         [item.owned]: true
-        //     })
-        // }else{
-        //     this.setState({
-        //         purchaseAlert: 'insufficent funds'
-        //     })
-        // }
     }
 
     mapStoreItems(){
         return(
-            this.state.storeItems.map(item =>{
+            this.state.storeItems.map(item => {
                 return(
-                    <div 
-                    className="store-item-wrapper" 
-                    key={item.key}
-                    >
-
-                        <div className="store-item-title-wrapper">
-                            <h3>{item.name}</h3>
-                        </div>
-                        <h5>{item.description}</h5>
-                        <FontAwesomeIcon
-                            icon="shopping-cart"
-                            onClick={this.handlePurchase} 
-                        />
-                        <h5 className="alert">{this.state.purchaseAlert}</h5>
-                        <h6>{item.price}</h6>
-                    </div>
-                );
+                    <StoreItem 
+                        item = {item}
+                        key = {item.key}
+                    />
+                )
             })
         );
     }
