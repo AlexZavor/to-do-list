@@ -7,7 +7,9 @@ export default class Store extends Component {
             <div className="store-wrapper">
                 <h1>Welcome to the store!</h1>
 
-                <StoreItems />
+                <StoreItems 
+                gold = {this.props.gold}
+                handleGoldChange = {this.props.handleGoldChange}/>
             </div>
         );
     }

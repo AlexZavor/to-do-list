@@ -6,20 +6,18 @@ export default class StoreItem extends Component {
         super(props);
 
         this.state={
-            purchaseAlert: '',
-            gold: 100
+            purchaseAlert: ''
         }
 
         this.handlePurchase = this.handlePurchase.bind(this);
     }
 
-    handlePurchase(event){
+    handlePurchase(){
         console.log('puchaseing', this.props.item);
         
-        if (this.props.item.price <= this.state.gold){
-            this.setState({
-                [item.owned]: true
-            })
+        if (this.props.item.price <= this.props.gold){
+            this.props.item.owned = true
+            this.props.handleGoldChange(this.props.item.price)
         }else{
             this.setState({
                 purchaseAlert: 'insufficent funds'

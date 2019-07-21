@@ -39,6 +39,8 @@ export default class StoreItems extends Component {
                     <StoreItem 
                         item = {item}
                         key = {item.key}
+                        gold = {this.props.gold}
+                        handleGoldChange = {this.props.handleGoldChange}
                     />
                 )
             })

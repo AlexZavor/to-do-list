@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import NavigationContainer from './navigation/navigation-container';
 import home from './pages/home';
-import store from './pages/store';
+import Store from './pages/Store';
 import room from './pages/room';
 import signUp from './pages/sign-up';
 import login from './pages/login';
@@ -22,9 +22,18 @@ export default class App extends Component {
 
     this.state = {
       loggedInStatus: '',
-      gold: ''
+      gold: '400'
     }
+
+    this.handleGoldChange = this.handleGoldChange.bind(this);
   }
+
+  handleGoldChange(change){
+    this.setState({
+      gold: this.state.gold-change
+    })
+  }
+
   render() {
     return (
       <div className='app'>
@@ -33,7 +42,14 @@ export default class App extends Component {
             <NavigationContainer />
             <Switch>
               <Route exact path = "/" component = {home} />
-              <Route path = "/store" component = {store} />
+              <Route path = "/store" render = {props => (
+                <Store
+                  {...props}
+                  loggedInStatus = {this.state.loggedInStatus}
+                  gold = {this.state.gold}
+                  handleGoldChange = {this.handleGoldChange}
+                />
+              )} />
               <Route path = "/room" component = {room} />
               <Route path = "/sign-up" component = {signUp} />
               <Route path = "/login" component = {login} />
