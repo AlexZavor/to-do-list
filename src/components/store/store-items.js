@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import StoreItem from './store-item';
-import sword from '../../../static/assets/temp_images/sword.png'
+import sword from '../../../static/assets/temp_images/sword.png';
+import plant from '../../../static/assets/temp_images/plant.png';
 
 
 export default class StoreItems extends Component {
@@ -16,13 +17,13 @@ export default class StoreItems extends Component {
                 {name: 'plant',
                 price: 200,
                 description: 'a simple plant for your room',
-                icon_url: null,
+                icon_url: plant,
                 key: '1',
                 owned: false},
                 
                 {name: 'sword',
                 price: 150,
-                description: 'a strong sword to weild',
+                description: 'a strong sword to wield',
                 icon_url: sword,
                 key: '2',
                 owned: false}
