@@ -17,6 +17,9 @@ Alex's notes:
 
 python api tutoral: https://codeburst.io/this-is-how-easy-it-is-to-create-a-rest-api-8a25122ab1f3
 
+hey guys. I found another idea that we could use a different api. i was gonna look into it for a bit.
+https://www.exavault.com/developer/api-docs/
+if your interested
 
 Gary's notes:
 test
