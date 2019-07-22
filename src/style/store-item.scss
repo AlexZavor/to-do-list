@@ -32,6 +32,16 @@
                 margin: 0px;
             }
         }
+        .store-item-icon-wrapper{
+            width: 50%;
+            height: auto;
+            
+            img{
+                width: 100%;
+                height: 100%;
+                image-rendering: pixelated;
+            }
+        }
         h5{
             margin: 0px;
         }
@@ -85,6 +95,16 @@
         .store-item-title-wrapper{
             h3{
                 margin: 0px;
+            }
+        }
+        .store-item-icon-wrapper{
+            width: 50%;
+            height: auto;
+            
+            img{
+                width: 100%;
+                height: 100%;
+                image-rendering: pixelated;
             }
         }
         h5{
