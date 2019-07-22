@@ -33,8 +33,6 @@ export default class ListComponent extends Component {
     this.newElement=this.newElement.bind(this);
     this.handleChange=this.handleChange.bind(this);
     this.mapItems=this.mapItems.bind(this);
-    this.crossOut = this.crossOut.bind(this);
-
   }
 
 
