@@ -39,7 +39,7 @@ export default class StoreItem extends Component {
                 className={owned === false ? (
                     'store-item-wrapper' 
                     ):(
-                    'owned-store-item-wrapper')}
+                    'store-item-wrapper owned')}
                 key={key}
             >
                 <div className="store-item-title-wrapper">

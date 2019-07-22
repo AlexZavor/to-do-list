@@ -6,9 +6,7 @@
     display: flex;
     flex-direction: column;
     .headding-wrapper{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center-flex;
         .store-icon{
             color: $off-black;
             font-size: 1.9rem;
