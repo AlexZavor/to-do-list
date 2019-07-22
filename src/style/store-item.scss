@@ -15,7 +15,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 200px;
+        height: 300px;
         margin: 0px;
         padding: 5px;
         text-align: center;
@@ -46,6 +46,7 @@
             margin: 0px;
         }
         h6{
+            font-size: 1.5em;
             margin: 3px;
             color: $warning;
             position: absolute;
@@ -58,11 +59,12 @@
             bottom: 0;
             left: 0;
             margin: 5px;
+            font-size: 1.3em;
         }
         .alert{
             position: absolute;
             bottom: 0;
-            font-size: .6em;
+            font-size: .7em;
             color: $error;
             margin: 3px;
             transition: .2s ease-in-out;
@@ -79,7 +81,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 200px;
+        height: 300px;
         margin: 0px;
         padding: 5px;
         text-align: center;

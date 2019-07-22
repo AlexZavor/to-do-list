@@ -3,7 +3,19 @@
     background-color: $off-white;
     margin: 0;
     height: calc(100vh - 82px);
-    h1{
-        margin: 0px;
+    display: flex;
+    flex-direction: column;
+    .headding-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .store-icon{
+            color: $off-black;
+            font-size: 1.9rem;
+            margin: 3px;
+        }
+        h1{
+            margin: 0px;
+        }
     }
 }
