@@ -45,6 +45,11 @@ export default class StoreItem extends Component {
                 <div className="store-item-title-wrapper">
                     <h3>{name}</h3>
                 </div>
+                {icon_url ? (
+                    <div className="store-item-icon-wrapper">
+                        <img src={icon_url}/>
+                    </div>
+                ) : null}
                 <h5>{description}</h5>
                 <FontAwesomeIcon
                     icon="shopping-cart"

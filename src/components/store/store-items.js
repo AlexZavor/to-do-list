@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import StoreItem from './store-item';
+import sword from '../../../static/assets/temp_images/sword.png'
+
 
 export default class StoreItems extends Component {
     //TODO - 
@@ -21,7 +23,7 @@ export default class StoreItems extends Component {
                 {name: 'sword',
                 price: 150,
                 description: 'a strong sword to weild',
-                icon_url: null,
+                icon_url: sword,
                 key: '2',
                 owned: false}
             ]
