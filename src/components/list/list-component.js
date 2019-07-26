@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
+import ListItems from "../list/list-items"
 
 export default class ListComponent extends Component {
   constructor() {
     super();
 
     this.state={
-        newItem: '',
+        newItem: "",
         listItems: [
             {name: "meet alex",
             time: null,
@@ -29,31 +31,31 @@ export default class ListComponent extends Component {
             key: "4"},
         ]
     }
+    
 
     this.newElement=this.newElement.bind(this);
     this.handleChange=this.handleChange.bind(this);
     this.mapItems=this.mapItems.bind(this);
+    this.listLegnth=this.listLegnth.bind(this);
   }
 
+  listLegnth() {
 
-//   HELP
-  crossOut(listItems) {
-    console.log("done")
-    this.setState({
-        //   ...this.state.listItems, status: "complete"
-
-        // listItems: update(this.state.listItems, {1: {status: {$set: "complete"}}})
-
-        [listItems.status]: "complete"
-        
-    })
   }
 
   mapItems() {
     return (
       this.state.listItems.map(item => {
           return(
-              <li key={item.key} onClick={this.crossOut}>{item.name}</li>
+            <ListItems 
+                listItems = {this.state.listItems}
+                id={item.name}
+                item = {item}
+                key = {item.key}   
+                status = {item.status} 
+                time = {item.time}      
+                name = {item.name}
+            />
           );
       })
     );
@@ -90,6 +92,8 @@ newElement() {
     }
   }
 
+  
+
   render() {
     return(
         <div>
@@ -109,7 +113,6 @@ newElement() {
             </div>
 
                 <ul id="myUL">
-                    
                     {this.mapItems()}
                 </ul>
         </div>
