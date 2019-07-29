@@ -15,11 +15,8 @@ if you need to ask questions. just text the group chat.
 
 Alex's notes:
 
-python api tutoral: https://codeburst.io/this-is-how-easy-it-is-to-create-a-rest-api-8a25122ab1f3
-
-hey guys. I found another idea that we could use a different api. i was gonna look into it for a bit.
-
-I will be gone from tuesday, July 22nd to saturday, July 27th
+VERY IMPORTANT:
+do not go onto the store page! im setting up the api and am running it localhost. if you try to accsess it now it will bug out and break stuff
 
 Gary's notes:
 test

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import StoreItem from './store-item';
+import axios from 'axios';
 import sword from '../../../static/assets/temp_images/sword.png';
 import plant from '../../../static/assets/temp_images/plant.png';
 
@@ -13,24 +14,26 @@ export default class StoreItems extends Component {
         super();
 
         this.state = {
-            storeItems: [
-                {name: 'plant',
-                price: 200,
-                description: 'a simple plant for your room',
-                icon_url: plant,
-                key: '1',
-                owned: false},
-                
-                {name: 'sword',
-                price: 150,
-                description: 'a strong sword to wield',
-                icon_url: sword,
-                key: '2',
-                owned: false}
-            ]
+            storeItems: []
         }
 
         this.mapStoreItems = this.mapStoreItems.bind(this);
+        this.getStoreItems = this.getStoreItems.bind(this);
+    }
+
+    getStoreItems(){
+        console.log('getting store items')
+        axios
+          .get('http://localhost:2403/things')
+          .then(responce => {
+              console.log(responce);
+              this.setState({
+                  storeItems: responce.data
+              })
+          })
+          .catch(error => {
+            console.log(error);
+          });
     }
 
     mapStoreItems(){
@@ -39,13 +42,17 @@ export default class StoreItems extends Component {
                 return(
                     <StoreItem 
                         item = {item}
-                        key = {item.key}
+                        key = {item.id}
                         gold = {this.props.gold}
                         handleGoldChange = {this.props.handleGoldChange}
                     />
                 )
             })
         );
+    }
+
+    componentWillMount(){
+        this.getStoreItems();
     }
 
     render(){
