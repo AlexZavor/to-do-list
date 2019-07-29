@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 
 
-import ListItems from "../list/list-items"
+import ListItems from "../list/list-items";
+import HomeListModal from"../../modals/home-list-modal";
 
 export default class ListComponent extends Component {
   constructor() {
     super();
 
     this.state={
+        newListItemsArray: "",
         newItem: "",
         listItems: [
             {name: "meet alex",
@@ -37,7 +39,30 @@ export default class ListComponent extends Component {
     this.handleChange=this.handleChange.bind(this);
     this.mapItems=this.mapItems.bind(this);
     this.listLegnth=this.listLegnth.bind(this);
+    this.handleModalClose=this.handleModalClose.bind(this);
+    this.handleNewBlogClick=this.handleNewBlogClick.bind(this);
+    this.updateNewListItemsArray=this.updateNewListItemsArray.bind(this);
   }
+
+  updateNewListItemsArray() {
+    this.setState({
+        newListItemsArray: this.state.listItems
+    })
+  }
+
+  handleModalClose() {
+    this.setState({
+      BlogModalIsOpen: false
+    })
+  }
+
+  handleNewBlogClick() {
+    this.setState({
+      BlogModalIsOpen: true
+    })
+    this.updateNewListItemsArray()
+  }
+
 
   listLegnth() {
 
@@ -95,9 +120,27 @@ newElement() {
   
 
   render() {
+    
     return(
         <div>
-            <div id="myDIV" className="header">
+
+        <HomeListModal
+            handleSuccessfulNewBlogSubmission={
+                this.handleSuccessfulNewBlogSubmission
+            }
+
+            newListItemsArray={this.state.newListItemsArray}
+
+            modalIsOpen={this.state.BlogModalIsOpen}
+            handleModalClose={this.handleModalClose}/>
+
+            <div className="new-home-list">
+                <a onClick={this.handleNewBlogClick}>
+                    <h1>add</h1>
+                </a>
+            </div>
+
+            {/* <div id="myDIV" className="header">
                 <h2>My To Do List</h2>
                 <input
                     type="text"
@@ -110,11 +153,11 @@ newElement() {
                     onClick={this.newElement}
                     className="addBtn">Add
                 </span>
-            </div>
+            </div> */}
 
-                <ul id="myUL">
-                    {this.mapItems()}
-                </ul>
+            <ul id="myUL">
+                {this.mapItems()}
+            </ul>
         </div>
     );
   }

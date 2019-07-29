@@ -75,9 +75,9 @@ export default class ListItems extends Component {
                     />
                     {name}
 
-                    <div className="list-delete" onClick={this.listDelete} >
+                    {/* <div className="list-delete" onClick={this.listDelete} >
                         delete
-                    </div> 
+                    </div>  */}
                 </li>
         );
     }
