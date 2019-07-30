@@ -18,6 +18,8 @@ Alex's notes:
 VERY IMPORTANT:
 do not go onto the store page! im setting up the api and am running it localhost. if you try to accsess it now it will bug out and break stuff
 
+ok. until i publish the real API, you will always get a "err_connection_refused" error. just ignore it for now. sorry.
+
 Gary's notes:
 test
 
