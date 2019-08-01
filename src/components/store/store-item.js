@@ -30,7 +30,7 @@ export default class StoreItem extends Component {
             name,
             price,
             description,
-            icon_url,
+            icon64,
             key,
             owned
         } = this.props.item
@@ -45,9 +45,9 @@ export default class StoreItem extends Component {
                 <div className="store-item-title-wrapper">
                     <h3>{name}</h3>
                 </div>
-                {icon_url ? (
+                {icon64 ? (
                     <div className="store-item-icon-wrapper">
-                        <img src={icon_url}/>
+                        <img src={"data:image/png;base64, " + icon64}/>
                     </div>
                 ) : null}
                 <h5>{description}</h5>

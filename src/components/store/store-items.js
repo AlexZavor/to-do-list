@@ -24,7 +24,7 @@ export default class StoreItems extends Component {
     getStoreItems(){
         console.log('getting store items')
         axios
-          .get('http://localhost:2403/things')
+          .get('https://to-do-list-back-end.herokuapp.com/things')
           .then(responce => {
               console.log(responce);
               this.setState({

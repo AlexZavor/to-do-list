@@ -40,7 +40,7 @@ export default class App extends Component {
   handleSuccsessfulLogin(id){
     axios({
       method: "put",
-      url: `//localhost:2403/users/${id}`,
+      url: `https://to-do-list-back-end.herokuapp.com/users/${id}`,
       data: {loggedIn: 'LOGGED_IN'},
       withCredentials: true
     }).then(response =>{
@@ -59,7 +59,7 @@ export default class App extends Component {
     } else {
       axios({
         method: "put",
-        url: `//localhost:2403/users/${this.state.loggedInAs.id}`,
+        url: `https://to-do-list-back-end.herokuapp.com/users/${this.state.loggedInAs.id}`,
         data: {loggedIn: 'NOT_LOGGED_IN'},
         withCredentials: true
       }).then(response =>{
@@ -80,7 +80,7 @@ export default class App extends Component {
   }
 
   checkLoginStatus(){
-    return axios.get("//localhost:2403/users/me",
+    return axios.get("https://to-do-list-back-end.herokuapp.com/users/me",
     {withCredentials: true})
     .then(responce=> {
       console.log(responce)
